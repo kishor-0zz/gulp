@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.custom-btn {
+  @extend %d-inline-block;
+  @include add-prefix(transition, $transition);
+  border: 1px solid transparent;
+  border-radius: 99px;
+  background-color: $brand-color;
+  color: $white-color;
+  padding-inline: 1.75rem;
+  padding-block: .75rem;
+  font-weight: 600;
+
+  span {
+    color: inherit;
+    font-weight: inherit;
+  }
+
+  &:hover {
+    color: $white-color;
+  }
+
+  &--border {
+    border-radius: 0.75rem;
+    background-color: $primary-color-dark;
+    color: $white-color;
+
+    &:hover {
+      background-color: $primary-shade;
+    }
+
+  }
+
+  &--outlined-secondary {
+    border-color: rgba($white-color, $alpha: .5);
+    background-color: transparent;
+    color: $white-color;
+
+    &:hover {
+      background-color: $white-color;
+      color: $brand-color;
+    }
+  }
+}
+
+
+// .btn {
+//   @extend %d-inline-block;
+//   @include add-prefix(transition, $transition);
+//   border: 1px solid transparent;
+//   border-radius: 8px;
+//   background-color: $brand-color;
+//   color: $white-color;
+//   padding-inline: 1.75rem;
+//   padding-block: .75rem;
+//   font-weight: 600;
+
+//   span {
+//     color: inherit;
+//     font-weight: inherit;
+//   }
+
+//   &:hover {
+//     color: $white-color;
+//   }
+
+//   &--border {
+//     border-radius: 0.75rem;
+//     background-color: $primary-color-dark;
+//     color: $white-color;
+
+//     &:hover {
+//       background-color: $primary-shade;
+//     }
+
+//   }
+
+//   &--outlined-secondary {
+//     border-color: rgba($white-color, $alpha: .5);
+//     background-color: transparent;
+//     color: $white-color;
+
+//     &:hover {
+//       background-color: $white-color;
+//       color: $brand-color;
+//     }
+//   }
+// }
+
+.d-block {
+  width: 100%;
+}
+
+
+.btn-group {
+  @extend %flex,
+  %align-i-center;
+  gap: 1rem;
+
+  &--gap-xs {
+    gap: .75rem;
+  }
+
+  &--gap-sm {
+    gap: 1rem;
+  }
+
+  &--gap-md {
+    gap: 1.5rem;
+  }
+
+  &--gap-lg {
+    gap: 2rem;
+  }
+}
+

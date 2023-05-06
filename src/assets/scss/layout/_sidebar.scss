@@ -1,0 +1,384 @@
+// ======== Responsive Variables
+$desktop: "only screen and (min-width: 1400px)";
+$laptop: "only screen and (min-width: 1200px) and (max-width: 1399px)";
+$lg: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md: "only screen and (min-width: 768px) and (max-width: 991px)";
+$xs: "(max-width: 767px)";
+$sm: "only screen and (min-width: 550px) and (max-width: 767px)";
+
+$gray: #5d657b;
+
+
+
+/* =========== Sidebar css =========== */
+// .sidebar {
+//   // @extend %of-hidden;
+//   border-radius: 1rem;
+//   background-color: red;
+// }
+
+.sidebar {
+  border-radius: 1rem;
+  background: $primary-color-dark;
+  width: 250px;
+  padding: 20px 0px;
+  height: calc(100vh - 60px);
+  position: fixed;
+  color: $text-color-light;
+  top: 15px;
+  left: 13px;
+  z-index: 99;
+  box-shadow: 0px 0px 30px rgba(200, 208, 216, 0.3);
+  @include add-prefix(transition, $transition);
+  @include add-prefix(transform, translateX(-280px));
+
+
+  @include breakpoint(xl) {
+    @include add-prefix(transform, translateX(0));
+    top: 30px;
+    left: 30px;
+  }
+
+  &.active {
+    @include add-prefix(transform, translateX(0));
+
+    @include breakpoint(xl) {
+      @include add-prefix(transform, translateX(-280px));
+    }
+  }
+
+  &__close {
+    @extend %p-abs,
+    %d-grid,
+    %place-i-center,
+    %c-pointer;
+    background-color: $primary-color-dark;
+    border: 2px solid rgba($brand-color, 0.4);
+    border-radius: .5rem;
+    color: $white-color;
+    height: 32px;
+    width: 32px;
+    right: -15px;
+    top: 30px;
+
+
+    @include breakpoint(xl) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    text-align: left;
+    padding-inline: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    max-height: calc(100% - 80px);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: .5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba($primary-shade, $alpha: .3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($brand-color, 0.3);
+      border-radius: 2px;
+    }
+  }
+
+  .sidebar__nav {
+    .divider {
+      padding: 5px 25px;
+      width: 100%;
+
+      hr {
+        height: 1px;
+        background: #e2e2e2;
+      }
+    }
+
+    ul {
+      .nav-item {
+        position: relative;
+        margin: 5px 0px;
+
+        &.nav-item-has-children {
+          &>a {
+            color: $white-color;
+
+            &::before {
+              opacity: 1;
+              visibility: visible;
+            }
+
+            &::after {
+              content: "\eb11";
+              font: normal normal normal 1em/1 "LineIcons";
+              position: absolute;
+              right: 25px;
+              top: 16px;
+              font-size: 12px;
+              @include add-prefix(transition, $transition);
+              @include add-prefix(transform, rotate(180deg));
+            }
+
+            &.collapsed {
+              color: inherit;
+
+              &::before {
+                opacity: 0;
+                visibility: hidden;
+              }
+
+              &::after {
+                @include add-prefix(transform, rotate(0deg));
+              }
+            }
+          }
+
+          ul {
+            padding: 0px 15px 0 45px;
+
+            li {
+              margin-bottom: 10px;
+
+              &:last-child {
+                margin-bottom: 0px;
+              }
+
+              a {
+                font-size: 14px;
+                font-weight: 400;
+                border-radius: .5rem;
+                padding: 8px 15px;
+                display: flex;
+                align-items: center;
+                border: 1px solid transparent;
+
+                &.active,
+                &:hover {
+                  color: $brand-color;
+                  border-color: rgba($brand-color, 0.15);
+                  background: rgba($brand-color, 0.1);
+                }
+
+                i {
+                  font-size: 16px;
+                  margin-right: 15px;
+                }
+
+                span.text {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                }
+
+                span.pro-badge {
+                  background: $primary;
+                  color: $white;
+                  padding: 1px 6px;
+                  border-radius: 4px;
+                  font-size: 10px;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          color: inherit;
+          font-size: 16px;
+          font-weight: 500;
+          width: 100%;
+          position: relative;
+          z-index: 1;
+          padding: 10px 25px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: $primary;
+            border-radius: 0 3px 3px 0px;
+            opacity: 0;
+            visibility: hidden;
+            @include add-prefix(transition, $transition);
+          }
+
+          span.text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+          }
+
+          span.pro-badge {
+            background: $primary;
+            color: $white;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            margin-left: 10px;
+          }
+
+          .icon {
+            margin-right: 12px;
+            font-size: 18px;
+
+            svg {
+              fill: currentColor;
+            }
+          }
+        }
+
+        &.active,
+        &:hover {
+
+          &>a,
+          &>a.collapsed {
+            color: $brand-color;
+
+            &::before {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  @extend %w-100,
+  %h-100,
+  %p-fixed;
+  @include add-prefix(transform, translateX(-100%));
+  top: 0;
+  left: 0;
+  background: rgba($black, 0.3);
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  cursor: url("/assets/images/close.ico"),
+    auto;
+
+
+  @media #{$desktop, $laptop} {
+    display: none;
+  }
+
+  &.active {
+    @media #{$lg, $md, $xs} {
+      opacity: 1;
+      visibility: visible;
+      @include add-prefix(transform, translateX(0));
+    }
+  }
+}
+
+.main-wrapper {
+  @extend %w-100;
+  @include add-prefix(transition, $transition);
+  margin-left: 280px;
+  min-height: 100vh;
+  padding-bottom: 85px;
+  position: relative;
+
+  @media #{$lg, $md, $xs} {
+    margin-left: 0;
+  }
+
+  @media #{$xs} {
+    padding-bottom: 110px;
+  }
+
+  &.active {
+    margin-left: 0;
+  }
+
+  // .container-fluid {
+  //   padding-left: 40px;
+  //   padding-right: 40px;
+
+  //   @media #{$xs} {
+  //     padding-left: 20px;
+  //     padding-right: 20px;
+  //   }
+  // }
+
+  // .footer {
+  //   padding: 25px 0;
+  //   justify-items: flex-end;
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+
+  //   .copyright {
+  //     p {
+  //       a {
+  //         color: inherit;
+
+  //         &:hover {
+  //           color: $primary;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .terms {
+  //     @media #{$xs} {
+  //       margin-bottom: 10px;
+  //       text-align: center;
+  //     }
+
+  //     a {
+  //       color: $gray;
+
+  //       &:hover {
+  //         color: $primary;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+.promo-box {
+  box-shadow: 0px 10px 20px rgba(200, 208, 216, 0.3);
+  padding: 24px 16px;
+  text-align: center;
+  max-width: 210px;
+  margin: 0 auto;
+  margin-top: 32px;
+  border-radius: 4px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .main-btn {
+    padding: 12px;
+    width: 100%;
+  }
+}

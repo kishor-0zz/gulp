@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+//*-----------------------------------
+//*** Custom variables for this template
+//*-----------------------------------
+
+//Template Theme colors
+$brand-color: $primary;
+$primary-color-dark: #023053;
+$primary-shade:#195F95;
+$secondary-color:#F3A57D;
+$secondary-color-2:#B7E7E5;
+$secondary-color-3:#FCEB8F;
+
+
+//Template Text colors
+$title-color:#101828;
+$title-color-dark: #231f51;
+$body-color-dark: #8d85b3;
+$text-color: #344054;
+$white-color:$white;
+$black-color:$black;
+$text-color-light:#9DBEDF;
+
+//Template Accent colors
+$border-color:#EAECF0;
+
+//Template Font family
+$title-font:'Inter',
+sans-serif;
+$text-font:'Source Sans Pro',
+sans-serif;
+
+
+//Template font sizes
+$fs-base: 16px !default;
+$fs-small:14px;
+
+$fs-h1: 56px;
+$fs-h2: 48px;
+$fs-h3: 36px;
+$fs-h4: 26px;
+$fs-h5: 24px;
+$fs-h6: 20px;
+
+
+//Template transition
+$transition:all .3s linear;
+
+
+
+
+//width variables
+$sidenav-w: 280px;
+$sidenav-gap:30px;
+$body-gap:30px;

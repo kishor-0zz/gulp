@@ -1,0 +1,57 @@
+.trk-card {
+  @extend %p-rel, %of-hidden;
+  background-color: $white-color;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.03);
+
+
+  &__header {
+    @extend %py-20,
+    %px-30;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    h5 {
+      @extend %text-semibold,
+      %mb-0;
+    }
+  }
+
+  .card-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__body {
+    @extend %p-30;
+
+    .card-title {
+      @extend %text-medium,
+      %mb-15;
+    }
+
+    .card-text {
+      @extend %text-regular;
+      color: $text-color;
+    }
+
+    .card-link{
+      color: $brand-color;
+      @include add-prefix(transition, $transition);
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__footer {
+    @extend %p-30;
+  }
+
+  &__overlay {
+    @extend %p-abs, %p-30;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

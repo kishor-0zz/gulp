@@ -1,0 +1,434 @@
+.gallery {
+
+   .gallery_top-up {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: tra;
+      border-bottom: 1px solid rgba(193, 193, 193, 0.31);
+      padding-block: 15px;
+
+      span {
+         display: inline-block;
+         text-transform: capitalize;
+      }
+
+      button {
+         background: rgba(255, 168, 7, 0.13);
+         color: #ffa807;
+         border: none;
+         outline: none;
+         box-shadow: none;
+         padding: 10px 15px;
+         text-transform: capitalize;
+         font-size: 14px;
+         border-radius: 5px;
+         transition: all 0.3s ease;
+
+         &:hover {
+            background: #ffa807;
+            color: $title-color;
+         }
+      }
+
+      &.middle {
+         background: #fff;
+         padding-inline: 2rem;
+
+         .file_inner {
+            display: flex;
+            align-items: center;
+            margin-block-end: 1.5rem;
+
+            .file-uploader__message-area {
+               p {
+                  margin-bottom: 0;
+                  text-transform: capitalize;
+                  margin-inline-end: 100px;
+
+                  @include breakpoint(max-md) {
+                     margin-inline-end: 30px;
+                  }
+               }
+
+
+            }
+
+            .file-chooser {
+               input {
+                  outline: none;
+                  box-shadow: none;
+                  box-shadow: none;
+
+                  &:focus {
+                     border: 1px solid #EAECF0;
+                  }
+               }
+            }
+         }
+
+         .form_btn {
+            text-align: center;
+
+            .file-uploader__submit-button {
+               background: #198754;
+               box-shadow: none;
+               outline: none;
+               color: #ffffff;
+               display: inline-block;
+               padding: 5px 10px;
+               border-radius: 5px;
+               font-size: 14px;
+               text-transform: capitalize;
+               border: 1px solid transparent;
+            }
+
+            .submit {
+               background: #198754;
+               transition: all 0.3s ease;
+
+               &:hover {
+                  background: transparent;
+                  color: #198754;
+                  border: 1px solid #198754;
+               }
+            }
+
+            .reset {
+               background: $text-color;
+               transition: all 0.3s ease;
+
+               &:hover {
+                  background: transparent;
+                  color: #198754;
+                  border: 1px solid #198754;
+               }
+            }
+         }
+      }
+   }
+
+
+
+   .gallery_top {
+      margin-block-end: 50px;
+   }
+
+   .gallery_photos {
+      margin-bottom: 20px;
+
+      .item {
+         position: relative;
+
+
+
+         .item-img {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+
+            &::after {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgba(0, 0, 0, 0.506);
+               visibility: hidden;
+               opacity: 0;
+               transition: all 0.3s ease;
+            }
+
+            img {
+
+               transform: scale(1);
+               transition: all 0.3s ease;
+               overflow: hidden;
+            }
+         }
+
+         .item-inner {
+            position: absolute;
+            bottom: 40%;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            visibility: hidden;
+            opacity: 0;
+
+            &.active {
+               visibility: visible;
+               opacity: 1;
+            }
+
+            .gallery_btns {
+               text-align: center;
+
+               button {
+                  background: #198754;
+                  border: 1px solid #198754;
+                  color: #ffffff;
+                  box-shadow: none;
+                  outline: none;
+                  display: inline-block;
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  font-size: 14px;
+                  text-transform: capitalize;
+                  transition: all 0.3s ease;
+
+                  @include breakpoint(max-lg) {
+                     padding: 5px 5px;
+                     font-size: 12px;
+                  }
+
+                  @include breakpoint(max-md) {
+                     padding: 3px 3px;
+                     font-size: 10px;
+                  }
+
+                  &:hover {
+                     background: #ffa807;
+                     border: 1px solid #ffa807;
+                  }
+               }
+            }
+
+            .modal {
+               .modal-dialog {
+                  max-width: 100%;
+                  height: 100vh;
+               }
+
+               .modal-body {
+
+                  .swiper {
+                     width: 100%;
+                     height: 100%;
+                  }
+
+                  .swiper-slide {
+                     text-align: center;
+                     font-size: 18px;
+                     background: #fff;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                  }
+
+                  .swiper-slide img {
+                     display: block;
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                  }
+
+                  .swiper {
+                     width: 100%;
+                     height: 300px;
+                     margin-left: auto;
+                     margin-right: auto;
+                  }
+
+                  .swiper-slide {
+                     background-size: cover;
+                     background-position: center;
+                  }
+
+                  .mySwiper2 {
+                     height: 80%;
+                     width: 100%;
+
+                     .swiper-slide {
+                        &::before {
+                           position: absolute;
+                           content: "";
+                           width: 100%;
+                           height: 100%;
+                           background: rgba(0, 0, 0, 0.829);
+                           backdrop-filter: 10px;
+                           top: 0;
+                           left: 0;
+
+                        }
+
+                        .item-img {
+                           border: none;
+                           padding: unset;
+
+                           img {
+                              border-radius: 10px;
+                           }
+
+                           &::after {
+                              background: transparent;
+                           }
+                        }
+
+                        .item-content {
+                           position: relative;
+                           z-index: 9;
+
+                           p {
+                              color: #ffffff;
+                              text-transform: capitalize;
+                              background: rgba(0, 145, 255, 0.185);
+                              padding: 44px;
+                              margin: 24px;
+                              backdrop-filter: blur(10px);
+                              border-radius: 10px;
+                              text-align: start;
+
+                              @include breakpoint(max-md) {
+                                 font-size: 14px;
+                              }
+                           }
+                        }
+                     }
+                  }
+
+                  .mySwiper {
+                     height: 20%;
+                     box-sizing: border-box;
+                     padding: 10px 0;
+                  }
+
+                  .mySwiper .swiper-slide {
+                     width: 25%;
+                     height: 100%;
+                     opacity: 0.4;
+                  }
+
+                  .mySwiper .swiper-slide-thumb-active {
+                     opacity: 1;
+                  }
+
+                  .swiper-slide img {
+                     display: block;
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     max-height: 450px;
+                  }
+
+                  .swiper1 .swiper-wrapper .swiper-slide img {
+                     max-height: 100px;
+                  }
+
+                  .swiper-button-next::after,
+                  .swiper-button-prev::after {
+                     display: none;
+                  }
+
+                  .swiper-button-next,
+                  .swiper-button-prev {
+                     width: 40px;
+                     height: 40px;
+                     line-height: 40px;
+                     background: #0091ffb7;
+                     border: 1px solid #0091ffb7;
+                     border-radius: 100%;
+                     color: #ffffff;
+                     text-align: center;
+                     transition: all 0.3s ease;
+
+                     &:hover {
+                        background: transparent;
+                        color: #ffffff;
+                        border: 1px solid #ffffff;
+                     }
+                  }
+
+                  .modal_dsc {
+                     text-align: center !important;
+                     padding: 50px;
+
+                     @include breakpoint(max-lg) {
+                        padding: 20px;
+                     }
+
+                     h6 {
+                        font-weight: 500;
+                        text-transform: capitalize;
+
+                        @include breakpoint(max-md) {
+                           font-size: 14px;
+                        }
+                     }
+
+                     p {
+                        text-align: center;
+                        margin-block-end: 30px;
+
+                        @include breakpoint(max-md) {
+                           font-size: 12px;
+                        }
+                     }
+
+                     button {
+                        background: #198754;
+                        border: 1px solid #198754;
+                        color: #ffffff;
+                        box-shadow: none;
+                        outline: none;
+                        display: inline-block;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        text-transform: capitalize;
+                        transition: all 0.3s ease;
+
+                        &.delete {
+                           background: #FF225D;
+                           border: 1px solid #FF225D;
+                        }
+
+                        &:hover {
+                           background: #ffa807;
+                           border: 1px solid #ffa807;
+                        }
+                     }
+
+                     .delete_icon {
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        background: #ffffff;
+                        border-radius: 100%;
+                        color: #FF225D;
+                        font-size: 30px;
+                        text-align: center;
+                        display: block;
+                        margin: 0 auto 30px auto;
+                     }
+                  }
+               }
+            }
+         }
+
+
+         &:hover {
+            .item-inner {
+               visibility: visible;
+               opacity: 1;
+            }
+
+            .item-img {
+               &::after {
+                  visibility: visible;
+                  opacity: 1;
+               }
+
+               img {
+                  transform: scale(1.1);
+                  border-radius: 5px;
+               }
+            }
+         }
+      }
+   }
+}

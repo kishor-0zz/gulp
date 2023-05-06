@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+// 1. Configuration and helpers
+@import 'abstracts/variables-bs',
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/extends',
+'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendors/normalize',
+'vendors/data-tables/simple-datatables',
+'vendors/bootstrap/bootstrap-full';
+
+
+// 3. Base stuff
+@import 'base/base',
+'base/fonts',
+'base/typography',
+'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/header',
+'layout/sidebar',
+'layout/main',
+'layout/data-tables',
+'layout/banner',
+'layout/about',
+'layout/footer';
+
+// 5. Components
+@import 'components/button',
+'components/inputs',
+'components/intro-video',
+'components/step',
+'components/feature',
+'components/integration',
+'components/testimonial',
+'components/section-header',
+'components/rating',
+'components/pricing',
+'components/faq',
+'components/cta',
+'components/social',
+'components/button',
+'components/tables',
+'components/role',
+'components/permissions',
+'components/forms',
+'components/admin',
+'components/gallery',
+'components/trk-card',
+'components/model',
+'components/avatar',
+'components/badge',
+'components/menus';
+
+// 6. Page-specific styles
+@import 'pages/home';
+
+// 7. Themes
+@import 'themes/default';

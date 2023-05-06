@@ -1,0 +1,35 @@
+.social {
+  @extend %flex;
+  @extend %align-i-center;
+  @extend %list-none;
+  @extend %ps-0;
+  @extend %mb-0;
+  gap: 15px;
+
+  &__link {
+    @extend %d-inline-block;
+    @extend %text-center;
+    @include box(45px);
+    @include add-prefix(transition, background-color .2s linear);
+    line-height: 45px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid rgba($brand-color, $alpha: .70);
+    @include font-size(18px);
+
+    svg,
+    i {
+      color: $body-color;
+      font-size: inherit;
+    }
+
+    &:hover {
+      background-color: $brand-color;
+
+      svg,
+      i {
+        color: $white-color;
+      }
+    }
+  }
+}

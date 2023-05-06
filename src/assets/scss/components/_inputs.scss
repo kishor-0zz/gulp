@@ -1,0 +1,32 @@
+%common-input {
+  @include font-size(14px);
+  background-color: $white-color;
+  box-shadow: none;
+  border: 1px solid $border-color;
+  border-radius: .5rem;
+  outline: none;
+
+  &:focus {
+    border-color: $brand-color;
+  }
+}
+
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"] {
+  @extend %common-input;
+  padding: .65rem 1.125rem;
+
+
+
+}
+
+select {
+  @extend %common-input;
+
+  &.datatable-selector {
+    padding: .65rem .75rem;
+  }
+}

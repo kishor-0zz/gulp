@@ -1,0 +1,104 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+.gradient-text--theme {
+  background: -webkit-linear-gradient($brand-color, $secondary-color);
+  @include add-prefix(background-clip, text);
+  @include add-prefix(text-fill-color, transparent);
+}
+
+
+.padding-top {
+  padding-block-start: 80px;
+
+  @include breakpoint(lg) {
+    padding-block-start: 130px;
+  }
+}
+
+.padding-bottom {
+  padding-block-end: 80px;
+
+  @include breakpoint(lg) {
+    padding-block-end: 130px;
+  }
+}
+
+.bg--light-color {
+  background-color: $bg-light-color;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $title-color-dark;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  p {
+    color: $body-color-dark;
+  }
+}
+
+
+.trk-thumb {
+  @extend %of-hidden,
+  %d-inline-grid,
+  %place-i-center;
+  border-radius: .5rem;
+
+  &.thumb-primary {
+    background-color: rgba($brand-color, $alpha: .2);
+    color: $brand-color;
+  }
+
+  &.thumb-success {
+    background-color: rgba($success, $alpha: .2);
+    color: $success;
+  }
+
+  &.thumb-warning {
+    background-color: rgba($warning, $alpha: .2);
+    color: $warning;
+  }
+
+  &.thumb-danger {
+    background-color: rgba($danger, $alpha: .2);
+    color: $danger;
+  }
+
+  span {
+    @extend %text-semibold;
+  }
+
+  &.thumb-xs {
+    @include box(24px);
+  }
+
+  &.thumb-sm {
+    @include box(40px);
+  }
+
+  &.thumb-md {
+    @include box(50px);
+  }
+
+  &.thumb-lg {
+    @include box(80px);
+  }
+}
+
+.trk-content {
+  p {
+    @extend %mb-0;
+  }
+}
+
+
+//Actions list

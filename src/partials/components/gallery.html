@@ -1,0 +1,655 @@
+<div class="gallery">
+  <div class="gallery_top">
+    <div class="gallery_top-up">
+      <span>File Manager</span>
+      <button><i class="fa-solid fa-file-signature"></i> All File Manager</button>
+    </div>
+    <div class="gallery_top-up middle">
+      <form method="post" class="file-uploader" action="" enctype="multipart/form-data">
+        <div class="file_inner">
+          <div class="file-uploader__message-area">
+            <p>file</p>
+          </div>
+          <div class="file-chooser">
+            <input class="form-control" type="file" title="multiple images select" id="image_uploads"
+              name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+          </div>
+        </div>
+        <div class="form_btn">
+          <input class="file-uploader__submit-button submit" type="submit" value="Upload">
+          <input class="file-uploader__submit-button reset" type="reset" value="reset">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="gallery_photos">
+    <div id="item" class="row g-3">
+      <div class="col-lg-3 col-md-3 col-6">
+        <div id="item" class="item">
+          <div class="item-img">
+            <img src="assets/images/gallery/2.jpg" alt="gallery">
+          </div>
+          <div id="item-inner" class="item-inner">
+            <div class="gallery_btns">
+              <button type="button" class="btn btn-primary view" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                data-bs-whatever="@mdo"><i class="fa-solid fa-eye"></i></button>
+              <button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                data-bs-whatever="@fat"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button type="button" class="btn btn-primary delete" data-bs-toggle="modal"
+                data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap"><i
+                  class="fa-solid fa-trash-can"></i></button>
+            </div>
+
+          </div>
+          <div class="modal_box">
+            <div class="modal fade view" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">View message</h1>
+                    <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                      class="swiper mySwiper2 swiper2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-3.jpg')">
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-2.jpg')">
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-4.jpg')">
+
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-5.jpg')">
+
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-6.jpg')">
+
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-7.jpg')">
+
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-8.jpg')">
+
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="swiper-slide"
+                          style="background-image: url('https://swiperjs.com/demos/images/nature-10.jpg')">
+
+                          <div class="row align-items-center">
+                            <div class=" col-lg-7 col-md-7 col-12 p-0">
+                              <div class="item-img">
+                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                              </div>
+                            </div>
+                            <div class="col-md-5 col-md-5 col-12 p-0">
+                              <div class="item-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum ad magnam a
+                                  temporibus impedit facere quae, similique minima recusandae. A.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="swiper-button-next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                      <div class="swiper-button-prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </div>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper swiper1">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade edit" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit message</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row align-items-center">
+
+                      <div class="col-12 col-md-6 col-lg-6">
+                        <div class="modal_img">
+                          <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 col-lg-6">
+                        <div class="modal_dsc text-start">
+                          <h6>wonderful viwe</h6>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                          </p>
+                          <div class="gallery_top-up middle">
+                            <form method="post" class="file-uploader" action="" enctype="multipart/form-data">
+                              <div class="file_inner">
+                                <div class="file-uploader__message-area">
+                                  <p>file</p>
+                                </div>
+                                <div class="file-chooser">
+                                  <input class="form-control" type="file" title="multiple images select"
+                                    id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+                                </div>
+                              </div>
+                              <div class="form_btn">
+                                <input class="file-uploader__submit-button submit" type="submit" value="Edit now">
+                                <input class="file-uploader__submit-button reset" type="reset" value="reset">
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade delete" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabe3"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete message</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row align-items-center">
+
+                      <div class="col-12 col-lg-6 col-md-6">
+                        <div class="modal_img">
+                          <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6 col-md-6">
+                        <div class="modal_dsc text-start">
+                          <div class="delete_icon">
+                            <span><i class="fa-solid fa-trash-can"></i></span>
+                          </div>
+                          <h6>Are you Sure?</h6>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                          </p>
+                          <button type="button" class="btn btn-primary cancel">Cancel</button>
+                          <button type="button" class="btn btn-primary delete">Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-6">
+        <div class="item">
+          <div class="item-img">
+            <img src="assets/images/gallery/2.jpg" alt="gallery">
+          </div>
+          <div id="item-inner" class="item-inner">
+            <div class="gallery_btns">
+              <button type="button" class="btn btn-primary view" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                data-bs-whatever="@mdo"><i class="fa-solid fa-eye"></i></button>
+              <button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                data-bs-whatever="@fat"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button type="button" class="btn btn-primary delete" data-bs-toggle="modal"
+                data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <!-- <div class="modal_box">
+              <div class="modal fade view" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">View message2</h1>
+                      <button onclick="closeModal()"></button> type="button" class="btn-close" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p class="mb-0">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade edit" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Edit message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                            <button type="button" class="btn btn-primary view">Edit now</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade delete" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabe3"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Delete message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/3.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                            <button type="button" class="btn btn-primary view">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-6">
+        <div class="item">
+          <div class="item-img">
+            <img src="assets/images/gallery/2.jpg" alt="gallery">
+          </div>
+          <div id="item-inner" class="item-inner">
+            <div class="gallery_btns">
+              <button type="button" class="btn btn-primary view" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                data-bs-whatever="@mdo"><i class="fa-solid fa-eye"></i></button>
+              <button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                data-bs-whatever="@fat"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button type="button" class="btn btn-primary delete" data-bs-toggle="modal"
+                data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <div class="modal_box">
+              <div class="modal fade view" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">View message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p class="mb-0">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade edit" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Edit message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                            <button type="button" class="btn btn-primary view">Edit now</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade delete" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabe3"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Delete message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                            <button type="button" class="btn btn-primary view">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-6">
+        <div class="item">
+          <div class="item-img">
+            <img src="assets/images/gallery/2.jpg" alt="gallery">
+          </div>
+          <div id="item-inner" class="item-inner">
+            <div class="gallery_btns">
+              <button type="button" class="btn btn-primary view" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                data-bs-whatever="@mdo"><i class="fa-solid fa-eye"></i></button>
+              <button type="button" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                data-bs-whatever="@fat"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button type="button" class="btn btn-primary delete" data-bs-toggle="modal"
+                data-bs-target="#exampleModal3" data-bs-whatever="@getbootstrap"><i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <!-- <div class="modal_box">
+              <div class="modal fade view" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">View message3</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p class="mb-0">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade edit" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Edit message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                            <button type="button" class="btn btn-primary view">Edit now</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade delete" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabe3"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Delete message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row align-items-center">
+
+                        <div class="col-6">
+                          <div class="modal_img">
+                            <img src="../../assets/images/gallery/2.jpg" alt="gallery">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="modal_dsc text-start">
+                            <h6>wonderful viwe</h6>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, molestias!
+                            </p>
+                            <button type="button" class="btn btn-primary view">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

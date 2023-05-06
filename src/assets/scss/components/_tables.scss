@@ -1,0 +1,97 @@
+.tables {
+
+  .tables_inner {
+    background: #ffffff;
+    padding: 50px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+
+    @include breakpoint(max-lg) {
+      padding: 30px 10px;
+    }
+  }
+
+  .tables_top-area {
+    display: flex;
+    max-width: 350px;
+    margin: 0 auto;
+    align-items: center;
+    margin-block-end: 50px;
+
+    @include breakpoint(max-sm) {
+      max-width: 100%;
+      margin-block-end: 35px;
+    }
+
+    span {
+      display: inline-block;
+      margin-inline-end: 10px;
+      text-transform: capitalize;
+      font-size: 1rem;
+
+    }
+
+    select {
+      outline: none;
+      border: none;
+      box-shadow: none;
+      border: 1px solid #EAECF0;
+      border-radius: 0.5rem;
+      color: $gray-600;
+      font-size: 0.875rem;
+      background-color: #fff;
+      padding: 0.65rem 1.125rem;
+      transition: all 0.3s ease;
+      font-family: $text-font;
+
+      &:hover {
+        border-color: rgba(0, 145, 255, 0.301);
+      }
+
+      &:focus {
+        border-color: #008FFF;
+      }
+    }
+  }
+
+  .tables_body {
+    nav {
+      .nav-tabs {
+        justify-content: center;
+        border-block-end: unset;
+        margin-block-end: 50px;
+
+        .nav-link {
+          @include add-prefix(transition, $transition);
+          border: none;
+          outline: none;
+          box-shadow: none;
+          border-radius: 0.5rem;
+          color: $white-color;
+          background-color: $primary-color-dark;
+          margin-inline-end: 5px;
+          font-family: $text-font;
+
+
+          @include breakpoint(sm) {
+            margin-bottom: 5px;
+          }
+
+          @include breakpoint(max-md) {
+            margin-bottom: 5px;
+          }
+
+
+          &:last-child {
+            margin-inline-end: 0;
+          }
+
+          &.active {
+            background-color: $brand-color;
+          }
+        }
+      }
+    }
+
+  }
+}

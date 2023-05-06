@@ -1,0 +1,131 @@
+.form {
+  //   @extend %p-rel;
+  z-index: 1;
+
+  label {
+    @extend %mb-5,
+    %ms-5;
+    @include font-size(16px);
+    text-transform: capitalize;
+
+  }
+
+  input,
+  textarea {
+    //  @extend %w-100;
+    @include add-prefix(transition, $transition);
+
+
+    &::placeholder {
+      font-weight: 400;
+      color: rgba($text-color, $alpha:.5);
+
+    }
+
+    &:focus-within {
+      outline: none;
+      border-color: none;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: $brand-color;
+    }
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+  .form-control {
+    border-radius: 10px;
+    color: $text-color;
+    padding: 0.65rem 1.125rem;
+    background: rgba(248, 249, 250, 0.5);
+
+
+    &:focus {
+      box-shadow: none;
+      border-color: rgba($brand-color, $alpha: 0.50);
+    }
+  }
+
+
+  .form-check {
+    &-input {
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:checked {
+        background-color: $brand-color;
+        border-color: $brand-color;
+      }
+    }
+
+    &-label {
+      font-size: 16px;
+    }
+  }
+
+  .form-radio {
+    &-input {
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:checked {
+        background-color: $brand-color;
+        border-color: $brand-color;
+      }
+    }
+
+    &-label {
+      font-size: 16px;
+    }
+  }
+
+  .option {
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &__inner {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  fieldset {
+    @extend %mb-10;
+
+    legend {
+      @extend %text-medium, %mb-5;
+      @include font-size(18px);
+    }
+  }
+
+  .range {
+    label {
+      display: block;
+    }
+  }
+
+  .color {
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-inline-end: 10px;
+      padding: 5px;
+    }
+  }
+
+
+
+
+
+
+}
+

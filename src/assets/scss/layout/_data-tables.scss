@@ -1,0 +1,145 @@
+.trk-table {
+  &__wrapper {
+    background-color: $white-color;
+    border-radius: .75rem;
+    box-shadow: 0 0 15px 0 rgba($black-color, $alpha: .03);
+
+  }
+
+  &__header {
+    border-bottom: 1px solid rgba($black-color, $alpha: .10);
+    padding: 20px 30px;
+
+
+  }
+
+  &__title {
+    h5 {
+      @extend %mb-5;
+      font-weight: 600;
+    }
+
+    p {
+      @extend %mb-0;
+      @include font-size(14px);
+    }
+  }
+
+  &__body {
+    @extend %p-30;
+
+    .datatable-top {
+      @extend %mb-20;
+    }
+  }
+}
+
+
+// default actions list for tables
+
+.trk-action {
+  &__list {
+    @extend %flex,
+    %align-i-center, %mb-0;
+    gap: 5px;
+
+  }
+
+  &__item {
+    @extend %d-inline-grid,
+    %place-i-center;
+    @include box(calc(30px + .25em));
+    border-radius: .5rem;
+
+    &:hover,
+    &:active {
+      background-color: rgba($brand-color, $alpha: .1);
+    }
+  }
+}
+
+
+//======= override default tables design
+.datatable-table>tbody>tr>td,
+.datatable-table>tbody>tr>th,
+.datatable-table>tfoot>tr>td,
+.datatable-table>tfoot>tr>th,
+.datatable-table>thead>tr>td,
+.datatable-table>thead>tr>th {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.datatable-sorter {
+
+  &:after,
+  &:before {
+    @include box(10px);
+    @include font-size(10px);
+    border: none;
+    font-family: 'lineicons';
+    color: $brand-color;
+  }
+
+  &::after {
+    content: "\eb0b";
+  }
+
+  &::before {
+    content: "\eb11";
+  }
+
+}
+
+.datatable-ascending {
+  .datatable-sorter {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.datatable-descending {
+  .datatable-sorter {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+
+//datatables pagination link customize
+.datatable-pagination {
+  a {
+    border-radius: .5rem;
+    padding: .25rem .75rem;
+
+    &:hover {
+      background-color: rgba($brand-color, $alpha: .3);
+    }
+  }
+
+  &-list {
+    @extend %flex,
+    %align-i-center;
+    gap: 5px;
+
+    &-item {
+      &.datatable-active {
+        .datatable-pagination-list-item-link {
+          background-color: $brand-color;
+          color: $white-color;
+
+          &:hover {
+            background-color: $brand-color;
+          }
+        }
+      }
+
+      &-link {
+        background-color: rgba($brand-color, $alpha: .1);
+
+      }
+    }
+  }
+}
